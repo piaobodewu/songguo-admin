@@ -1,8 +1,7 @@
+// 项目入口
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './style.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
