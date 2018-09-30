@@ -1,0 +1,1 @@
+export const GET_SUMMARY_LISTS = 'home/GET_SUMMARY_LISTS';

@@ -1,5 +1,5 @@
-
 import {injectGlobal} from 'styled-components';
+
 // 引入antd UI组件库
 import 'antd/dist/antd.css';
 
@@ -49,15 +49,10 @@ injectGlobal`
         border-spacing: 0;
     }
 `;
-//
-// export const All = styled.div`
-//     .top{
-//         minHeight: '100vh';
-//     }
+
+// export const Tcontent = styled.div`
+//      padding: 24px;
+//      background: #fff;
+//      min-height: 500px;
 // `;
 
-/*#components-layout-demo-side .logo {*/
-/*height: 32px;*/
-/*background: rgba(255,255,255,.2);*/
-/*margin: 16px;*/
-/*}*/
