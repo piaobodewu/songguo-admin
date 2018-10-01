@@ -15,3 +15,13 @@ export const HomeWrapper = styled.div`
 export const SummaryWrapper = styled.div`
     width:100%;
 `;
+
+// export const ChartWrapper = styled.div`
+//     position:relative;
+//     float:left;
+// `;
+//
+// export const ProgressWrapper = styled.div`
+//     position:relative;
+//     float:left;
+// `;
