@@ -1,0 +1,1 @@
+export const CHANGE_TOGGLE = 'headers/CHANGE_TOGGLE';

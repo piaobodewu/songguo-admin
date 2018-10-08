@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import { Row, Col , Progress} from 'antd';
+import {OrderChartTitle,OrderChartRate} from '../style';
 import {
     Chart,
     Geom,
@@ -91,13 +92,13 @@ class OrderChart extends Component {
         };
         return (
             <div>
-                <Row style={{'margin':'20px 0 0 0','padding':'20px 30px 20px 50px','background':'white','border-bottom':'1.3px solid #f5f5f5'}}>
-                    <div>
-                        七日化订单量
-                    </div>
+                <Row>
+                    <OrderChartTitle>
+                        各月化订单量
+                    </OrderChartTitle>
                 </Row>
                 <Row style={{'padding':'20px 20px 0px 0px','background':'white'}}>
-                    <Col span={19}>
+                    <Col xl={19} md={19} xs={24}>
                         <div>
                             {/*echarts容器不能设置为百分比,必须具体长度。设置最大宽度即可*/}
                             <Chart height={400} data={dv} style={{'maxWidth':'1000px'}} scale={cols} forceFit>
@@ -133,26 +134,27 @@ class OrderChart extends Component {
                                     }}
                                 />
                             </Chart>
-
                         </div>
                     </Col>
-                    <Col span={5}>
-                        <div style={{'margin':'10px 0 20px 0'}}>
+                    <Col xs={2} sm={2} md={0} lg={0} xl={0} >
+                    </Col>
+                    <Col xl={5} md={5} sm={20} xs={20}>
+                        <OrderChartRate>
                             <h1>月订单增长率</h1>
                             <Progress percent={70} status="active" />
-                        </div>
-                        <div style={{'margin':'10px 0 20px 0'}}>
+                        </OrderChartRate>
+                        <OrderChartRate>
                             <h1>月订单增长率</h1>
                             <Progress percent={50} status="active" />
-                        </div>
-                        <div style={{'margin':'10px 0 20px 0'}}>
+                        </OrderChartRate>
+                        <OrderChartRate>
                             <h1>月订单增长率</h1>
                             <Progress percent={80} status="active" />
-                        </div>
-                        <div style={{'margin':'10px 0 20px 0'}}>
+                        </OrderChartRate>
+                        <OrderChartRate>
                             <h1>月订单增长率</h1>
                             <Progress percent={50} status="active" />
-                        </div>
+                        </OrderChartRate>
                     </Col>
                 </Row>
             </div>

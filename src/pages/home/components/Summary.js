@@ -14,22 +14,22 @@ class Summary extends PureComponent{
         return(
             <SummaryWrapper>
                 <Row gutter={16}>
-                    <Col span={6}>
+                    <Col xl={6} md={12}>
                         <Card title="今日下单量" bordered={false} headStyle={headStyles} bodyStyle={bodyStyles}>
                             {list.get(0)}
                         </Card>
                     </Col>
-                    <Col span={6}>
+                    <Col xl={6} md={12}>
                         <Card title="月下单量" bordered={false} headStyle={headStyles} bodyStyle={bodyStyles}>
                             {list.get(1)}
                         </Card>
                     </Col>
-                    <Col span={6}>
+                    <Col xl={6} md={12}>
                         <Card title="月活跃" bordered={false} headStyle={headStyles} bodyStyle={bodyStyles}>
                             {list.get(2)}
                         </Card>
                     </Col>
-                    <Col span={6}>
+                    <Col xl={6} md={12}>
                         <Card title="总注册量" bordered={false} headStyle={headStyles} bodyStyle={bodyStyles}>
                             {list.get(3)}
                         </Card>

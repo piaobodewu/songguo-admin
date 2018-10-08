@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import {connect} from 'react-redux';
 import { Layout, Menu, Icon } from 'antd';
 import {Logo} from './style';
 import {Link} from 'react-router-dom';
@@ -8,21 +9,15 @@ const SubMenu = Menu.SubMenu;
 
 class SidePull extends Component{
 
-    state = {
-        collapsed: false,
-    };
-
-    onCollapse = (collapsed) => {
-        // console.log(collapsed);
-        this.setState({ collapsed });
-    };
-
     render(){
         return(
             <Sider
+                // collapsible
+                // collapsed={this.state.collapsed}
+                // onCollapse={this.onCollapse}
+                trigger={null}
                 collapsible
-                collapsed={this.state.collapsed}
-                onCollapse={this.onCollapse}
+                collapsed={this.props.collapsed}
             >
                 <div>
                     <Logo />
@@ -51,7 +46,11 @@ class SidePull extends Component{
                         key="sub2"
                         title={<span><Icon type="user" /><span>账户</span></span>}
                     >
-                        <Menu.Item key="5">用户</Menu.Item>
+                        <Menu.Item key="5">
+                            <Link to='/accountUser'>
+                                用户
+                            </Link>
+                        </Menu.Item>
                         <Menu.Item key="6">管理员</Menu.Item>
                         <Menu.Item key="7">角色管理</Menu.Item>
                     </SubMenu>
@@ -75,4 +74,10 @@ class SidePull extends Component{
     }
 }
 
-export default SidePull;
+const mapState = (state) => {
+    return{
+        collapsed:state.getIn(['headers','collapsed'])
+    }
+};
+
+export default connect(mapState,null)(SidePull);
